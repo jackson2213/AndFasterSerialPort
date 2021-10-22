@@ -174,7 +174,7 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
                 } catch (ModbusError modbusError) {
                     modbusError.printStackTrace();
                 }
-
+                et_write_addr.setText(String.valueOf(read_addr));
                 break;
             case R.id.bt_write:
                 if (!serialHelper.isOpen()) {
@@ -190,7 +190,7 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
                     modbusError.printStackTrace();
                 }
 
-
+                et_read_addr.setText(String.valueOf(write_addr));
                 break;
         }
     }
